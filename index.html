@@ -3,62 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vision Insight Optical</title>
+
+  <title>Vision Insight Optical | Mactan</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #f7f7f7;
       color: #222;
-      text-align: center;
     }
 
     header {
       background: #b30000;
       color: white;
-      padding: 35px 20px;
+      text-align: center;
+      padding: 45px 20px;
     }
 
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 38px;
+      letter-spacing: 1px;
     }
 
     header p {
-      font-size: 17px;
-      margin-top: 10px;
+      font-size: 19px;
+      margin: 12px 0 0;
     }
 
-    .section {
+    .hero {
       background: white;
-      margin: 20px auto;
-      padding: 25px;
-      max-width: 700px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 25px;
     }
 
     .button {
       display: inline-block;
       background: #b30000;
       color: white;
-      padding: 14px 25px;
-      margin: 8px;
+      padding: 15px 25px;
+      margin: 7px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
 
     .button:hover {
       background: #800000;
     }
 
+    .button.facebook {
+      background: #222;
+    }
+
+    .section {
+      background: white;
+      margin: 20px auto;
+      padding: 35px 25px;
+      max-width: 850px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #b30000;
+      font-size: 27px;
+      margin-top: 0;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .service {
+      background: #f5f5f5;
+      padding: 25px 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .promo {
+      background: #fff4f4;
+      border: 2px solid #b30000;
+    }
+
+    .location {
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
     footer {
       background: #222;
       color: white;
-      padding: 20px;
+      text-align: center;
+      padding: 30px 20px;
       margin-top: 30px;
+    }
+
+    footer p {
+      margin: 7px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        display: block;
+        max-width: 300px;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
@@ -66,45 +160,154 @@
 <body>
 
   <header>
-    <h1>Vision Insight Optical</h1>
-    <p>See Clearly. Look Great. Feel Confident!</p>
+    <h1>VISION INSIGHT OPTICAL</h1>
+    <p>See Clearly. Look Great. Feel Confident.</p>
   </header>
 
-  <div class="section">
-    <h2>Welcome to Vision Insight Optical</h2>
+
+  <section class="hero">
+
+    <h2>Your Vision. Your Style. Our Care.</h2>
 
     <p>
-      Affordable eyewear, free eye check, frames, sunglasses,
-      and optical services in Mactan.
+      Discover quality and affordable eyewear at
+      <strong>Vision Insight Optical</strong>.
+      We offer frames, sunglasses, eye checks,
+      and optical services for you and your family.
     </p>
 
-    <p><strong>Your vision matters. Your style matters.</strong></p>
+    <div class="buttons">
 
-    <a class="button" href="tel:09662482699">Call Us</a>
-    <a class="button" href="https://www.facebook.com/">Facebook</a>
-  </div>
+      <a class="button" href="tel:09662482699">
+        📞 CALL US
+      </a>
 
-  <div class="section">
-    <h2>Our Services</h2>
+      <a class="button facebook"
+         href="https://www.facebook.com/share/p/1ZgHcxuzH4/"
+         target="_blank">
+        📘 FACEBOOK PAGE
+      </a>
 
-    <p>👓 Frames & Eyeglasses</p>
-    <p>🕶️ Sunglasses</p>
-    <p>👁️ FREE Eye Check</p>
-    <p>✨ Quality & Affordable Optical Services</p>
-  </div>
+    </div>
 
-  <div class="section">
-    <h2>Visit Us</h2>
+  </section>
 
-    <p><strong>Vision Insight Optical</strong></p>
-    <p>Ground Floor, Gaisano Mactan Circle</p>
-    <p>Lapu-Lapu City, Cebu</p>
-    <p>📞 0966-248-2699</p>
-  </div>
+
+  <section class="section">
+
+    <h2>👓 What We Offer</h2>
+
+    <div class="services">
+
+      <div class="service">
+        👓<br>
+        Frames & Eyeglasses
+      </div>
+
+      <div class="service">
+        🕶️<br>
+        Sunglasses
+      </div>
+
+      <div class="service">
+        👁️<br>
+        FREE Eye Check
+      </div>
+
+      <div class="service">
+        ✨<br>
+        Optical Services
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="section promo">
+
+    <h2>🎁 SPECIAL PROMOS</h2>
+
+    <p>
+      Check our Facebook page for the latest
+      eyewear promotions and special offers.
+    </p>
+
+    <p>
+      <strong>
+        Follow Vision Insight Optical on Facebook
+        and don't miss our deals!
+      </strong>
+    </p>
+
+    <a class="button facebook"
+       href="https://www.facebook.com/share/p/1ZgHcxuzH4/"
+       target="_blank">
+      📘 VISIT OUR FACEBOOK PAGE
+    </a>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>👁️ FREE EYE CHECK</h2>
+
+    <p>
+      Take care of your eyes and get the right eyewear
+      for your needs.
+    </p>
+
+    <p>
+      <strong>Ask us about our eye check schedule.</strong>
+    </p>
+
+    <a class="button" href="tel:09662482699">
+      📞 BOOK / INQUIRE
+    </a>
+
+  </section>
+
+
+  <section class="section">
+
+    <h2>📍 Visit Us</h2>
+
+    <div class="location">
+
+      <p>
+        <strong>Vision Insight Optical</strong>
+      </p>
+
+      <p>
+        Ground Floor<br>
+        Gaisano Mactan Circle<br>
+        Lapu-Lapu City, Cebu
+      </p>
+
+      <p>
+        📞 <strong>0966-248-2699</strong>
+      </p>
+
+    </div>
+
+    <a class="button"
+       href="https://www.google.com/maps/search/?api=1&query=Gaisano+Mactan+Circle"
+       target="_blank">
+      📍 OPEN MAP
+    </a>
+
+  </section>
+
 
   <footer>
+
+    <p><strong>VISION INSIGHT OPTICAL</strong></p>
+
     <p>Your Vision, Our Priority.</p>
+
     <p>© 2026 Vision Insight Optical</p>
+
   </footer>
 
 </body>
