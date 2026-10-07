@@ -19,139 +19,148 @@
     }
 
     header {
-      background: #b30000;
-      color: white;
+      background: #ffffff;
+      padding: 18px 20px;
       text-align: center;
-      padding: 45px 20px;
+      border-bottom: 1px solid #ddd;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 38px;
-      letter-spacing: 1px;
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #b00000;
+      margin-bottom: 5px;
     }
 
-    header p {
-      font-size: 19px;
-      margin: 12px 0 0;
+    .tagline {
+      font-size: 14px;
+      color: #555;
     }
 
     .hero {
-      background: white;
+      position: relative;
+      width: 100%;
+      min-height: 480px;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("Profile%20Store%20Image.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 45px 20px;
+      padding: 30px 20px;
     }
 
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
+    .hero-content {
+      max-width: 700px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin: 0 0 15px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
     }
 
     .hero p {
-      max-width: 650px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .buttons {
-      margin-top: 25px;
+      font-size: 19px;
+      line-height: 1.5;
+      margin-bottom: 25px;
     }
 
     .button {
       display: inline-block;
-      background: #b30000;
-      color: white;
-      padding: 15px 25px;
-      margin: 7px;
-      border-radius: 8px;
+      padding: 14px 24px;
+      margin: 5px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
+      background: #b00000;
+      color: white;
     }
 
-    .button:hover {
-      background: #800000;
-    }
-
-    .button.facebook {
-      background: #222;
+    .button.light {
+      background: white;
+      color: #b00000;
     }
 
     .section {
-      background: white;
-      margin: 20px auto;
-      padding: 35px 25px;
-      max-width: 850px;
-      border-radius: 14px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 45px 20px;
+      max-width: 1100px;
+      margin: auto;
       text-align: center;
     }
 
     .section h2 {
-      color: #b30000;
-      font-size: 27px;
-      margin-top: 0;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
-    .service {
-      background: #f5f5f5;
-      padding: 25px 15px;
+    .card {
+      background: white;
+      padding: 25px 20px;
       border-radius: 10px;
-      font-size: 18px;
-      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
-    .promo {
-      background: #fff4f4;
-      border: 2px solid #b30000;
+    .card-icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 8px 0;
+      color: #b00000;
     }
 
     .location {
-      line-height: 1.8;
-      font-size: 17px;
+      background: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .location h2 {
+      margin-bottom: 12px;
     }
 
     footer {
       background: #222;
       color: white;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 30px;
-    }
-
-    footer p {
-      margin: 7px;
+      padding: 25px 15px;
+      font-size: 14px;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
+      .hero {
+        min-height: 430px;
       }
 
-      header p {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
         font-size: 16px;
       }
 
-      .hero h2 {
-        font-size: 25px;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .button {
-        display: block;
-        max-width: 300px;
-        margin: 10px auto;
+      .logo {
+        font-size: 23px;
       }
     }
   </style>
@@ -160,153 +169,110 @@
 <body>
 
   <header>
-    <h1>VISION INSIGHT OPTICAL</h1>
-    <p>See Clearly. Look Great. Feel Confident.</p>
+    <div class="logo">VISION INSIGHT OPTICAL</div>
+    <div class="tagline">See Better. Look Better. Live Better.</div>
   </header>
-
 
   <section class="hero">
 
-    <h2>Your Vision. Your Style. Our Care.</h2>
+    <div class="hero-content">
 
-    <p>
-      Discover quality and affordable eyewear at
-      <strong>Vision Insight Optical</strong>.
-      We offer frames, sunglasses, eye checks,
-      and optical services for you and your family.
-    </p>
+      <h1>Your Vision. Our Insight.</h1>
 
-    <div class="buttons">
+      <p>
+        Quality eyewear and professional eye care
+        conveniently located in Mactan.
+      </p>
 
-      <a class="button" href="tel:09662482699">
-        📞 CALL US
-      </a>
+      <a href="#services" class="button">Explore Our Services</a>
 
-      <a class="button facebook"
-         href="https://www.facebook.com/share/p/1ZgHcxuzH4/"
-         target="_blank">
-        📘 FACEBOOK PAGE
+      <a href="tel:09662482699" class="button light">
+        📞 Call Us
       </a>
 
     </div>
 
   </section>
 
+  <section class="section" id="services">
 
-  <section class="section">
+    <h2>What We Offer</h2>
 
-    <h2>👓 What We Offer</h2>
+    <p class="section-intro">
+      Find the right eyewear for your everyday needs,
+      with professional eye care from a licensed optometrist.
+    </p>
 
     <div class="services">
 
-      <div class="service">
-        👓<br>
-        Frames & Eyeglasses
+      <div class="card">
+        <div class="card-icon">👓</div>
+        <h3>Eyeglasses</h3>
+        <p>
+          Stylish frames and prescription eyewear
+          for your everyday vision needs.
+        </p>
       </div>
 
-      <div class="service">
-        🕶️<br>
-        Sunglasses
+      <div class="card">
+        <div class="card-icon">🕶️</div>
+        <h3>Sunglasses</h3>
+        <p>
+          Explore our selection of sunglasses
+          for style and everyday protection.
+        </p>
       </div>
 
-      <div class="service">
-        👁️<br>
-        FREE Eye Check
+      <div class="card">
+        <div class="card-icon">👁️</div>
+        <h3>Free Eye Check</h3>
+        <p>
+          Have your eyes checked by our
+          licensed optometrist.
+        </p>
       </div>
 
-      <div class="service">
-        ✨<br>
-        Optical Services
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h3>Quality Eye Care</h3>
+        <p>
+          We help you find eyewear suited to
+          your vision, lifestyle, and budget.
+        </p>
       </div>
 
     </div>
 
   </section>
 
+  <section class="location">
 
-  <section class="section promo">
-
-    <h2>🎁 SPECIAL PROMOS</h2>
+    <h2>Visit Vision Insight Optical</h2>
 
     <p>
-      Check our Facebook page for the latest
-      eyewear promotions and special offers.
+      📍 Ground Floor, Gaisano Mactan Circle<br>
+      Lapu-Lapu City, Cebu
     </p>
 
     <p>
-      <strong>
-        Follow Vision Insight Optical on Facebook
-        and don't miss our deals!
-      </strong>
+      📞 0966-248-2699
     </p>
 
-    <a class="button facebook"
-       href="https://www.facebook.com/share/p/1ZgHcxuzH4/"
-       target="_blank">
-      📘 VISIT OUR FACEBOOK PAGE
+    <a href="tel:09662482699" class="button">
+      Call Vision Insight Optical
     </a>
 
   </section>
-
-
-  <section class="section">
-
-    <h2>👁️ FREE EYE CHECK</h2>
-
-    <p>
-      Take care of your eyes and get the right eyewear
-      for your needs.
-    </p>
-
-    <p>
-      <strong>Ask us about our eye check schedule.</strong>
-    </p>
-
-    <a class="button" href="tel:09662482699">
-      📞 BOOK / INQUIRE
-    </a>
-
-  </section>
-
-
-  <section class="section">
-
-    <h2>📍 Visit Us</h2>
-
-    <div class="location">
-
-      <p>
-        <strong>Vision Insight Optical</strong>
-      </p>
-
-      <p>
-        Ground Floor<br>
-        Gaisano Mactan Circle<br>
-        Lapu-Lapu City, Cebu
-      </p>
-
-      <p>
-        📞 <strong>0966-248-2699</strong>
-      </p>
-
-    </div>
-
-    <a class="button"
-       href="https://www.google.com/maps/search/?api=1&query=Gaisano+Mactan+Circle"
-       target="_blank">
-      📍 OPEN MAP
-    </a>
-
-  </section>
-
 
   <footer>
 
-    <p><strong>VISION INSIGHT OPTICAL</strong></p>
+    <p>
+      © 2026 Vision Insight Optical. All rights reserved.
+    </p>
 
-    <p>Your Vision, Our Priority.</p>
-
-    <p>© 2026 Vision Insight Optical</p>
+    <p>
+      See clearly. Choose confidently.
+    </p>
 
   </footer>
 
