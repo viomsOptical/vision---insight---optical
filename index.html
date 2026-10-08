@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,25 +6,24 @@
 
   <title>Vision Insight Optical | Mactan</title>
 
-  <meta name="description" content="Vision Insight Optical at Gaisano Mactan Circle, Lapu-Lapu City. Eyeglasses, sunglasses, free eye check, and quality eye care.">
+  <meta name="description" content="Vision Insight Optical at Gaisano Mactan Circle. Eyeglasses, sunglasses, free eye check, and quality eye care.">
 
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f8ff;
+      font-family: Arial, sans-serif;
       color: #222;
+      background: #ffffff;
+      line-height: 1.6;
     }
-
-    /* =========================
-       BRAND COLORS
-       Purple + Blue + Orange
-       ========================= */
 
     :root {
       --purple: #5b2c83;
@@ -35,362 +33,380 @@
       --orange: #f28c28;
       --orange-light: #fff3e5;
       --white: #ffffff;
-      --text: #222222;
-      --muted: #666666;
     }
 
-    /* =========================
-       HEADER
-       ========================= */
+    /* HEADER */
 
     header {
-      background: var(--white);
-      padding: 18px 20px;
-      text-align: center;
-      border-bottom: 1px solid #e2e2e2;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
     }
 
     .logo {
-      font-size: 28px;
-      font-weight: 800;
       color: var(--purple);
-      margin-bottom: 5px;
-      letter-spacing: 0.5px;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     .tagline {
-      font-size: 14px;
       color: var(--blue);
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: bold;
     }
 
-    /* =========================
-       HERO
-       ========================= */
+    /* HERO */
 
     .hero {
-      position: relative;
-      width: 100%;
       min-height: 520px;
-
-      background-image:
-        linear-gradient(
-          rgba(45, 20, 75, 0.48),
-          rgba(15, 70, 120, 0.45)
-        ),
-        url("Profile%20Store%20Image.jpg");
-
-      background-size: cover;
-      background-position: center;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-align: center;
-      padding: 40px 20px;
+      color: white;
+      padding: 60px 20px;
+      background:
+        linear-gradient(
+          rgba(63, 29, 96, 0.78),
+          rgba(23, 105, 170, 0.70)
+        ),
+        url("Profile%20Store%20Image.jpg") center/cover no-repeat;
     }
 
     .hero-content {
-      max-width: 760px;
-      color: white;
+      max-width: 800px;
     }
 
     .hero h1 {
-      font-size: 44px;
+      font-size: clamp(36px, 7vw, 64px);
       margin: 0 0 15px;
-      line-height: 1.15;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.5);
     }
 
     .hero p {
-      font-size: 19px;
-      line-height: 1.6;
-      margin: 0 auto 28px;
-      max-width: 650px;
+      font-size: 20px;
+      margin-bottom: 28px;
     }
 
-    .hero-highlight {
-      display: inline-block;
-      background: rgba(242, 140, 40, 0.95);
-      padding: 9px 16px;
-      border-radius: 30px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: white;
+    .highlight {
+      color: #ffd08a;
     }
-
-    /* =========================
-       BUTTONS
-       ========================= */
 
     .button {
       display: inline-block;
       padding: 14px 24px;
-      margin: 5px;
-      border-radius: 8px;
+      margin: 6px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.25s ease;
+      transition: 0.2s;
     }
 
-    .button.primary {
-      background: var(--purple);
-      color: white;
-    }
-
-    .button.primary:hover {
-      background: var(--purple-dark);
-      transform: translateY(-2px);
-    }
-
-    .button.orange {
+    .button-orange {
       background: var(--orange);
       color: white;
     }
 
-    .button.orange:hover {
-      background: #d97412;
-      transform: translateY(-2px);
-    }
-
-    .button.light {
+    .button-white {
       background: white;
       color: var(--purple);
     }
 
-    .button.light:hover {
-      background: #f3eff8;
+    .button:hover {
       transform: translateY(-2px);
     }
 
-    /* =========================
-       GENERAL SECTIONS
-       ========================= */
+    /* SECTIONS */
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1150px;
+    section {
+      padding: 65px 20px;
+      scroll-margin-top: 75px;
+    }
+
+    .container {
+      max-width: 1100px;
       margin: auto;
+    }
+
+    .section-title {
       text-align: center;
-    }
-
-    .section h2 {
-      font-size: 32px;
-      margin: 0 0 12px;
       color: var(--purple);
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
-    .section-intro {
-      color: var(--muted);
-      max-width: 720px;
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      max-width: 700px;
       margin: 0 auto 35px;
-      line-height: 1.7;
     }
 
-    /* =========================
-       SERVICES
-       ========================= */
+    /* SERVICE CARDS */
 
     .services {
+      background: #faf7fc;
+    }
+
+    .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
     .service-link {
       text-decoration: none;
       color: inherit;
-      display: block;
     }
 
     .card {
       background: white;
-      padding: 30px 22px;
-      border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(45, 30, 80, 0.09);
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       border-top: 5px solid var(--purple);
-      transition: 0.25s ease;
       height: 100%;
+      transition: 0.2s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 25px rgba(45, 30, 80, 0.16);
+      transform: translateY(-5px);
     }
 
     .card-icon {
       font-size: 42px;
-      margin-bottom: 12px;
     }
 
     .card h3 {
-      margin: 8px 0 10px;
       color: var(--purple);
-      font-size: 21px;
-    }
-
-    .card p {
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 15px;
     }
 
     .click-hint {
-      font-size: 13px;
-      font-weight: bold;
       color: var(--orange);
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 14px;
     }
 
-    /* =========================
-       EYEGWEAR PREVIEW
-       ========================= */
+    /* PRODUCTS */
 
-    .eyewear-section {
-      background: var(--blue-light);
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .eyewear-section h2 {
-      color: var(--blue);
-      margin-top: 0;
-      font-size: 32px;
-    }
-
-    .eyewear-box {
-      max-width: 900px;
-      margin: 25px auto 0;
+    .products-section {
       background: white;
-      border-radius: 16px;
-      padding: 35px 25px;
-      box-shadow: 0 4px 18px rgba(20, 80, 130, 0.10);
     }
 
-    .eyewear-box p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* =========================
-       INFORMATION SECTIONS
-       ========================= */
-
-    .info-grid {
+    .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
       margin-top: 30px;
     }
 
+    .product-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+      border: 1px solid #eeeeee;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .product-image:hover {
+      transform: scale(1.02);
+    }
+
+    .product-info {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin: 0 0 8px;
+      color: var(--purple);
+    }
+
+    .product-info p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    .zoom-hint {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .inquire-button {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--orange);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* BLUE INFORMATION SECTION */
+
+    .blue-section {
+      background: var(--blue-light);
+    }
+
+    .info-boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
     .info-box {
       background: white;
-      padding: 30px 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(45, 30, 80, 0.08);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
     }
 
     .info-box h3 {
       color: var(--blue);
-      margin-top: 0;
     }
 
-    .info-box p {
-      color: var(--muted);
-      line-height: 1.7;
+    /* ORANGE SECTION */
+
+    .orange-section {
+      background: var(--orange-light);
     }
 
-    /* =========================
-       LOCATION
-       ========================= */
+    /* LOCATION */
 
     .location {
-      background: var(--orange-light);
-      padding: 55px 20px;
       text-align: center;
+      background: #f8f8f8;
     }
 
     .location h2 {
       color: var(--purple);
-      margin-top: 0;
-      font-size: 32px;
     }
 
-    .location p {
-      line-height: 1.8;
-      color: #444;
+    .phone {
+      color: var(--blue);
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    /* =========================
-       FOOTER
-       ========================= */
+    /* FOOTER */
 
     footer {
       background: var(--purple-dark);
       color: white;
       text-align: center;
-      padding: 30px 15px;
-      font-size: 14px;
+      padding: 30px 20px;
     }
 
-    footer .footer-name {
-      color: #ffffff;
-      font-size: 18px;
+    footer strong {
+      color: #ffd08a;
+    }
+
+    /* MODAL / ZOOM */
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      color: white;
+      font-size: 42px;
+      cursor: pointer;
       font-weight: bold;
-      margin-bottom: 8px;
     }
 
-    footer p {
-      margin: 7px 0;
-    }
+    /* MOBILE */
 
-    /* =========================
-       MOBILE
-       ========================= */
+    @media (max-width: 800px) {
 
-    @media (max-width: 600px) {
-
-      header {
-        padding: 15px 12px;
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
       }
 
-      .logo {
-        font-size: 22px;
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .tagline {
-        font-size: 13px;
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-boxes {
+        grid-template-columns: 1fr;
       }
 
       .hero {
-        min-height: 470px;
+        min-height: 500px;
+      }
+
+      .product-image {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .service-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero h1 {
-        font-size: 32px;
+        font-size: 38px;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 17px;
       }
 
-      .section {
-        padding: 45px 16px;
-      }
-
-      .section h2,
-      .eyewear-section h2,
-      .location h2 {
-        font-size: 27px;
-      }
-
-      .button {
-        display: block;
-        margin: 9px auto;
-        max-width: 300px;
+      section {
+        padding: 50px 15px;
       }
     }
   </style>
@@ -398,51 +414,42 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-       ========================= -->
+  <!-- HEADER -->
 
   <header>
+    <div class="header-inner">
 
-    <div class="logo">
-      VISION INSIGHT OPTICAL
+      <div class="logo">
+        VISION INSIGHT OPTICAL
+      </div>
+
+      <div class="tagline">
+        See Better. Look Better. Live Better.
+      </div>
+
     </div>
-
-    <div class="tagline">
-      See Better. Look Better. Live Better.
-    </div>
-
   </header>
 
 
-  <!-- =========================
-       HERO
-       ========================= -->
+  <!-- HERO -->
 
   <section class="hero">
 
     <div class="hero-content">
 
-      <div class="hero-highlight">
-        👁️ Professional Eye Care in Mactan
-      </div>
-
       <h1>
-        Your Vision.<br>
-        Our Insight.
+        Vision Insight <span class="highlight">Optical</span>
       </h1>
 
       <p>
-        Quality eyewear and professional eye care
-        conveniently located at Gaisano Mactan Circle,
-        Lapu-Lapu City.
+        Quality eyewear and eye care at Gaisano Mactan Circle.
       </p>
 
-      <a href="#services" class="button primary">
+      <a href="#services" class="button button-orange">
         Explore Our Services
       </a>
 
-      <a href="tel:09662482699" class="button orange">
+      <a href="tel:09662482699" class="button button-white">
         📞 Call Us
       </a>
 
@@ -451,295 +458,134 @@
   </section>
 
 
-  <!-- =========================
-       SERVICES
-       ========================= -->
+  <!-- SERVICES -->
 
-  <section class="section" id="services">
+  <section id="services" class="services">
 
-    <h2>
-      What We Offer
-    </h2>
+    <div class="container">
 
-    <p class="section-intro">
-      Discover eyewear and eye-care services designed
-      to help you see clearly, look your best,
-      and choose with confidence.
-    </p>
+      <h2 class="section-title">
+        Our Services
+      </h2>
 
-
-    <div class="services">
-
-
-      <!-- EYeglasses -->
-
-      <a href="#eyeglasses" class="service-link">
-
-        <div class="card">
-
-          <div class="card-icon">
-            👓
-          </div>
-
-          <h3>
-            Eyeglasses
-          </h3>
-
-          <p>
-            Stylish frames and prescription eyewear
-            for your everyday vision needs.
-          </p>
-
-          <div class="click-hint">
-            VIEW EYEGLASSES →
-          </div>
-
-        </div>
-
-      </a>
-
-
-      <!-- Sunglasses -->
-
-      <a href="#sunglasses" class="service-link">
-
-        <div class="card">
-
-          <div class="card-icon">
-            🕶️
-          </div>
-
-          <h3>
-            Sunglasses
-          </h3>
-
-          <p>
-            Explore our selection of sunglasses
-            for style and everyday protection.
-          </p>
-
-          <div class="click-hint">
-            VIEW SUNGLASSES →
-          </div>
-
-        </div>
-
-      </a>
-
-
-      <!-- Free Eye Check -->
-
-      <a href="#eye-check" class="service-link">
-
-        <div class="card">
-
-          <div class="card-icon">
-            👁️
-          </div>
-
-          <h3>
-            Free Eye Check
-          </h3>
-
-          <p>
-            Have your eyes checked by our
-            licensed optometrist.
-          </p>
-
-          <div class="click-hint">
-            LEARN MORE →
-          </div>
-
-        </div>
-
-      </a>
-
-
-      <!-- Quality Eye Care -->
-
-      <a href="#quality-care" class="service-link">
-
-        <div class="card">
-
-          <div class="card-icon">
-            ✨
-          </div>
-
-          <h3>
-            Quality Eye Care
-          </h3>
-
-          <p>
-            Eyewear suited to your vision,
-            lifestyle, and budget.
-          </p>
-
-          <div class="click-hint">
-            LEARN MORE →
-          </div>
-
-        </div>
-
-      </a>
-
-    </div>
-
-
- </section>
-
-
-  <!-- =========================
-       EYEGLASSES
-       ========================= -->
-
-  <section class="eyewear-section" id="eyeglasses">
-
-    <h2>
-      👓 Eyeglasses
-    </h2>
-
-    <div class="eyewear-box">
-
-      <h3>
-        Find Your Perfect Frame
-      </h3>
-
-      <p>
-        We offer a variety of eyeglass frames
-        for different styles, face shapes,
-        lifestyles, and budgets.
+      <p class="section-subtitle">
+        Discover eyewear and eye care services for you and your family.
       </p>
 
-      <p>
-        Our frame collection will be added here
-        as we upload each product.
-      </p>
 
-      <a href="tel:09662482699" class="button primary">
-        📞 Ask About Eyeglasses
-      </a>
-
-    </div>
-
-  </section>
+      <div class="service-grid">
 
 
-  <!-- =========================
-       SUNGLASSES
-       ========================= -->
+        <!-- EYEGLASSES -->
 
-  <section class="section" id="sunglasses">
+        <a href="#eyeglasses" class="service-link">
 
-    <h2>
-      🕶️ Sunglasses
-    </h2>
+          <div class="card">
 
-    <p class="section-intro">
-      Protect your eyes while looking great.
-      Our sunglasses collection will be displayed
-      here as products are added.
-    </p>
+            <div class="card-icon">
+              👓
+            </div>
 
-    <a href="tel:09662482699" class="button orange">
-      🕶️ Ask About Sunglasses
-    </a>
+            <h3>
+              Eyeglasses
+            </h3>
 
-  </section>
+            <p>
+              Stylish frames and prescription eyewear
+              for your everyday vision needs.
+            </p>
 
+            <div class="click-hint">
+              VIEW EYEGLASSES →
+            </div>
 
-  <!-- =========================
-       FREE EYE CHECK
-       ========================= -->
+          </div>
 
-  <section class="eyewear-section" id="eye-check">
-
-    <h2>
-      👁️ Free Eye Check
-    </h2>
-
-    <div class="eyewear-box">
-
-      <h3>
-        Start With Your Vision
-      </h3>
-
-      <p>
-        Visit Vision Insight Optical for a
-        professional eye check with our
-        licensed optometrist.
-      </p>
-
-      <p>
-        Ask us about our current free eye-check
-        offer and available schedule.
-      </p>
-
-      <a href="tel:09662482699" class="button primary">
-        📞 Call for Eye Check
-      </a>
-
-    </div>
-
-  </section>
+        </a>
 
 
-  <!-- =========================
-       QUALITY EYE CARE
-       ========================= -->
+        <!-- SUNGLASSES -->
 
-  <section class="section" id="quality-care">
+        <a href="#sunglasses" class="service-link">
 
-    <h2>
-      ✨ Quality Eye Care
-    </h2>
+          <div class="card">
 
-    <p class="section-intro">
-      We help you choose eyewear that fits
-      your vision needs, lifestyle, personal style,
-      and budget.
-    </p>
+            <div class="card-icon">
+              🕶️
+            </div>
 
+            <h3>
+              Sunglasses
+            </h3>
 
-    <div class="info-grid">
+            <p>
+              Stylish sunglasses for everyday protection
+              and great looks.
+            </p>
 
-      <div class="info-box">
+            <div class="click-hint">
+              VIEW SUNGLASSES →
+            </div>
 
-        <h3>
-          👓 Personalized Eyewear
-        </h3>
+          </div>
 
-        <p>
-          We help you choose frames and lenses
-          that suit your everyday needs.
-        </p>
-
-      </div>
+        </a>
 
 
-      <div class="info-box">
+        <!-- FREE EYE CHECK -->
 
-        <h3>
-          👁️ Professional Care
-        </h3>
+        <a href="#eye-check" class="service-link">
 
-        <p>
-          Eye care services are provided with
-          the assistance of a licensed optometrist.
-        </p>
+          <div class="card">
 
-      </div>
+            <div class="card-icon">
+              👁️
+            </div>
+
+            <h3>
+              Free Eye Check
+            </h3>
+
+            <p>
+              Visit us for a basic eye check with our
+              licensed optometrist.
+            </p>
+
+            <div class="click-hint">
+              LEARN MORE →
+            </div>
+
+          </div>
+
+        </a>
 
 
-      <div class="info-box">
+        <!-- QUALITY CARE -->
 
-        <h3>
-          💜 Your Comfort Matters
-        </h3>
+        <a href="#quality-care" class="service-link">
 
-        <p>
-          Our goal is to help you see clearly
-          while feeling confident with your eyewear.
-        </p>
+          <div class="card">
+
+            <div class="card-icon">
+              ❤️
+            </div>
+
+            <h3>
+              Quality Eye Care
+            </h3>
+
+            <p>
+              Helping you and your family see better
+              and care for your eyes.
+            </p>
+
+            <div class="click-hint">
+              LEARN MORE →
+            </div>
+
+          </div>
+
+        </a>
 
       </div>
 
@@ -748,53 +594,401 @@
   </section>
 
 
-  <!-- =========================
-       LOCATION
-       ========================= -->
+  <!-- EYEGLASSES -->
+
+  <section id="eyeglasses" class="products-section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        👓 Eyeglasses Collection
+      </h2>
+
+      <p class="section-subtitle">
+        Explore some of our available frames at Vision Insight Optical.
+        Tap any photo to view it larger.
+      </p>
+
+
+      <div class="product-grid">
+
+
+        <!-- FRAME 1 -->
+
+        <div class="product-card">
+
+          <img
+            src="Frames-03-Stepper.jfif"
+            alt="Vision Insight Optical Stepper Eyeglass Frame"
+            class="product-image"
+            onclick="openModal(this.src)"
+          >
+
+          <div class="product-info">
+
+            <h3>
+              Stepper Frame
+            </h3>
+
+            <p>
+              Stylish optical frame
+            </p>
+
+            <div class="zoom-hint">
+              🔍 Tap photo to enlarge
+            </div>
+
+            <a
+              href="tel:09662482699"
+              class="inquire-button"
+            >
+              📞 Inquire
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- FRAME 2 -->
+
+        <div class="product-card">
+
+          <img
+            src="Frames-Silhouette-01.jfif"
+            alt="Vision Insight Optical Silhouette Eyeglass Frame"
+            class="product-image"
+            onclick="openModal(this.src)"
+          >
+
+          <div class="product-info">
+
+            <h3>
+              Silhouette Frame
+            </h3>
+
+            <p>
+              Elegant optical frame
+            </p>
+
+            <div class="zoom-hint">
+              🔍 Tap photo to enlarge
+            </div>
+
+            <a
+              href="tel:09662482699"
+              class="inquire-button"
+            >
+              📞 Inquire
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- FRAME 3 -->
+
+        <div class="product-card">
+
+          <img
+            src="Frames-Silhouette-02-SPX-2965-75-9000-57-17-150.jfif"
+            alt="Vision Insight Optical Silhouette SPX Eyeglass Frame"
+            class="product-image"
+            onclick="openModal(this.src)"
+          >
+
+          <div class="product-info">
+
+            <h3>
+              Silhouette SPX Frame
+            </h3>
+
+            <p>
+              Premium optical frame
+            </p>
+
+            <div class="zoom-hint">
+              🔍 Tap photo to enlarge
+            </div>
+
+            <a
+              href="tel:09662482699"
+              class="inquire-button"
+            >
+              📞 Inquire
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SUNGLASSES -->
+
+  <section id="sunglasses" class="blue-section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        🕶️ Sunglasses Collection
+      </h2>
+
+      <p class="section-subtitle">
+        Check out our available sunglasses. Tap the photo to view it larger.
+      </p>
+
+
+      <div class="product-grid">
+
+
+        <!-- RAY-BAN -->
+
+        <div class="product-card">
+
+          <img
+            src="Sunglass-RayBan-01-RB3025-Aviator-Metal-L2823-58-14-135-3N.jfif"
+            alt="Ray-Ban RB3025 Aviator Sunglasses"
+            class="product-image"
+            onclick="openModal(this.src)"
+          >
+
+          <div class="product-info">
+
+            <h3>
+              Ray-Ban Aviator
+            </h3>
+
+            <p>
+              RB3025 Aviator Metal
+            </p>
+
+            <div class="zoom-hint">
+              🔍 Tap photo to enlarge
+            </div>
+
+            <a
+              href="tel:09662482699"
+              class="inquire-button"
+            >
+              📞 Inquire
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FREE EYE CHECK -->
+
+  <section id="eye-check" class="orange-section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        👁️ Free Eye Check
+      </h2>
+
+      <p class="section-subtitle">
+        Take care of your vision. Visit Vision Insight Optical
+        for a basic eye check with our licensed optometrist.
+      </p>
+
+      <div style="text-align:center;">
+
+        <a
+          href="tel:09662482699"
+          class="button button-orange"
+        >
+          📞 Call for Eye Check
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUALITY CARE -->
+
+  <section id="quality-care" class="products-section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        ❤️ Quality Eye Care
+      </h2>
+
+      <div class="info-boxes">
+
+        <div class="info-box">
+
+          <h3>
+            👓 Eyewear
+          </h3>
+
+          <p>
+            Choose from stylish frames and prescription
+            eyewear for your everyday needs.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <h3>
+            👁️ Vision
+          </h3>
+
+          <p>
+            Proper vision care can help you and your
+            family see more comfortably.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <h3>
+            ❤️ Family Care
+          </h3>
+
+          <p>
+            We welcome children, adults, and seniors
+            looking for quality eye care.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LOCATION -->
 
   <section class="location">
 
-    <h2>
-      Visit Vision Insight Optical
-    </h2>
+    <div class="container">
 
-    <p>
-      📍 <strong>Ground Floor, Gaisano Mactan Circle</strong><br>
-      Lapu-Lapu City, Cebu
-    </p>
+      <h2>
+        📍 Visit Vision Insight Optical
+      </h2>
 
-    <p>
-      📞 <strong>0966-248-2699</strong>
-    </p>
+      <p>
+        Ground Floor, Gaisano Mactan Circle
+      </p>
 
-    <a href="tel:09662482699" class="button primary">
-      Call Vision Insight Optical
-    </a>
+      <p>
+        Lapu-Lapu City, Cebu
+      </p>
+
+      <p>
+        📞
+        <a
+          href="tel:09662482699"
+          class="phone"
+        >
+          0966-248-2699
+        </a>
+      </p>
+
+    </div>
 
   </section>
 
 
-  <!-- =========================
-       FOOTER
-       ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
-    <div class="footer-name">
-      VISION INSIGHT OPTICAL
-    </div>
+    <p>
+      <strong>Vision Insight Optical</strong>
+    </p>
 
     <p>
       See Better. Look Better. Live Better.
     </p>
 
     <p>
-      © 2026 Vision Insight Optical. All rights reserved.
+      © 2026 Vision Insight Optical
     </p>
 
   </footer>
 
 
+  <!-- IMAGE ZOOM MODAL -->
+
+  <div
+    id="imageModal"
+    class="modal"
+    onclick="closeModal()"
+  >
+
+    <span class="close-modal">
+      ×
+    </span>
+
+    <img
+      id="modalImage"
+      src=""
+      alt="Enlarged product image"
+      onclick="event.stopPropagation()"
+    >
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function openModal(imageSource) {
+
+      document.getElementById("modalImage").src = imageSource;
+
+      document.getElementById("imageModal").classList.add("show");
+
+    }
+
+
+    function closeModal() {
+
+      document.getElementById("imageModal").classList.remove("show");
+
+    }
+
+
+    document.addEventListener("keydown", function(event) {
+
+      if (event.key === "Escape") {
+
+        closeModal();
+
+      }
+
+    });
+
+  </script>
+
+
 </body>
 </html>
-```
